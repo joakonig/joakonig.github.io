@@ -3,165 +3,218 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About – Joaquín Vargas</title>
+  <title>Sobre mí | Joaquín Vargas</title>
   <style>
+    /* === Global Styles === */
+    :root {
+      --primary: #007acc;
+      --bg: #f9f9f9;
+      --text: #333;
+      --card-bg: #fff;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
-      margin: 40px;
-      background-color: #f9f9f9;
-      color: #333;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
     }
+
+    /* === Header === */
     header {
-      margin-bottom: 30px;
+      background: var(--primary);
+      color: white;
+      padding: 20px 0;
       text-align: center;
     }
+
     nav a {
-      margin-right: 15px;
-      color: #333;
+      color: white;
+      margin: 0 15px;
       text-decoration: none;
+      font-weight: 500;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
-    h1 {
-      color: #0077b5;
+
+    /* === Hero / Intro === */
+    .hero {
+      text-align: center;
+      padding: 60px 20px 40px 20px;
     }
-    .container {
-      max-width: 800px;
-      margin: auto;
+
+    .hero img {
+      width: 130px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 6px var(--shadow);
     }
-    section {
-      margin-top: 30px;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    .hero h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: var(--primary);
     }
-    a.profile-link {
-      color: #0077b5;
-      text-decoration: none;
-    }
-    a.profile-link:hover {
-      text-decoration: underline;
-    }
-    img.profile-pic {
-      width: 150px;
-      border-radius: 75px;
-      display: block;
+
+    .hero p {
+      font-size: 1.1em;
+      color: #555;
+      max-width: 700px;
       margin: 0 auto;
     }
-    ul {
+
+    /* === Content Sections === */
+    .section-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      box-shadow: 0 2px 6px var(--shadow);
+      padding: 25px;
+      margin-bottom: 30px;
+    }
+
+    .card h2 {
+      color: var(--primary);
+      margin-top: 0;
+    }
+
+    .card ul {
       list-style-type: none;
       padding-left: 0;
     }
-    ul li {
+
+    .card li {
       margin-bottom: 10px;
+    }
+
+    .highlight {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* === Footer === */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      background: #f1f1f1;
+      color: #555;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <img class="profile-pic" src="your-image-url" alt="Joaquín Vargas Salamanca">
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html"><strong>About</strong></a>
-      </nav>
-      <h1>Joaquín Vargas Salamanca</h1>
-      <p><strong>Analista Económico Financiero Senior</strong> en el <strong>Banco Central de Chile</strong></p>
-      <p>Chile</p>
-    </header>
 
-    <section>
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html"><strong>About</strong></a>
+      <a href="https://www.linkedin.com/in/joaquinvargass/" target="_blank">LinkedIn</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <img src="your-image-url" alt="Joaquín Vargas Salamanca">
+    <h1>Joaquín Vargas Salamanca</h1>
+    <p><strong>Analista Económico Financiero Senior</strong> en el Banco Central de Chile<br>Apasionado por el análisis económico, la ciencia de datos y la inteligencia de negocios.</p>
+  </section>
+
+  <!-- About Content -->
+  <div class="section-container">
+
+    <div class="card">
       <h2>Resumen</h2>
-      <p>Soy titulado de la carrera <strong>Ingeniería Comercial con mención en Economía</strong> en la <strong>Universidad de Chile</strong>, y cursé un semestre de Economía en la <strong>Universidad de Göttingen, Alemania</strong>.</p>
-      <p>Actualmente trabajo en el <strong>Banco Central de Chile</strong> en el Departamento de Estadísticas como Analista Económico Financiero Senior, donde soy parte del grupo encargado de la conciliación de las Cuentas Nacionales.</p>
-      <p>Tengo gran interés en desarrollarme como <strong>Data Scientist</strong>, con conocimientos en distintos modelos, análisis y manejo de datos, además de experiencia en Business Intelligence y herramientas como <strong>Python</strong>, <strong>R</strong>, <strong>Power BI</strong> y <strong>SQL</strong>.</p>
-      <p>Puedes encontrar más información en mi perfil de <a class="profile-link" href="https://www.linkedin.com/in/joaquinvargass/" target="_blank" rel="noopener">LinkedIn</a> o escribirme a <a href="mailto:joaquin.8.jv@gmail.com">joaquin.8.jv@gmail.com</a>.</p>
-    </section>
+      <p>Soy titulado de <strong>Ingeniería Comercial con mención en Economía</strong> en la <strong>Universidad de Chile</strong>, y cursé un semestre de Economía en la <strong>Universidad de Göttingen, Alemania</strong>.</p>
+      <p>Actualmente trabajo en el <strong>Banco Central de Chile</strong> como Analista Económico Financiero Senior en el Departamento de Estadísticas, donde formo parte del grupo encargado de la conciliación de las Cuentas Nacionales.</p>
+      <p>Me interesa desarrollarme como <strong>Data Scientist</strong>, aplicando modelos cuantitativos, análisis de datos y herramientas como Python, R, Power BI y SQL.</p>
+    </div>
 
-    <section>
+    <div class="card">
       <h2>Experiencia</h2>
       <ul>
-        <li>
-          <strong>Banco Central de Chile</strong><br>
-          Analista Económico Financiero Senior — Abril 2023 - Presente<br>
-          Analista Económico Financiero — Abril 2021 - Abril 2023<br>
-          <em>4 años 7 meses de experiencia en total</em>
-        </li>
-        <li>
-          <strong>ECLAC (CEPAL)</strong><br>
-          Consultor Económico — Julio 2020 - Junio 2021<br>
-          <em>1 año</em>
-        </li>
-        <li>
-          <strong>Universidad Diego Portales</strong><br>
-          Asistente de Investigación — Mayo 2020 - Abril 2021<br>
-          <em>1 año</em>
-        </li>
-        <li>
-          <strong>Universidad de Chile</strong><br>
-          Ayudante de Introducción a las Finanzas — Marzo 2019 - Marzo 2020<br>
-          Ayudante Finanzas I — Marzo 2019 - Julio 2019
-        </li>
-        <li>
-          <strong>Practicante División de Desarrollo Productivo y Empresarial</strong><br>
-          Noviembre 2019 - Mayo 2020<br>
-          <em>Provincia de Santiago, Chile</em>
-        </li>
+        <li><strong>Banco Central de Chile</strong><br>Analista Económico Financiero Senior (Abr 2023 – Presente)<br>Analista Económico Financiero (Abr 2021 – Abr 2023)</li>
+        <li><strong>ECLAC (CEPAL)</strong><br>Consultor Económico (Jul 2020 – Jun 2021)</li>
+        <li><strong>Universidad Diego Portales</strong><br>Asistente de Investigación (May 2020 – Abr 2021)</li>
+        <li><strong>Universidad de Chile</strong><br>Ayudante Introducción a las Finanzas (Mar 2019 – Mar 2020)<br>Ayudante Finanzas I (Mar 2019 – Jul 2019)</li>
+        <li><strong>División de Desarrollo Productivo y Empresarial</strong><br>Practicante (Nov 2019 – May 2020, Santiago, Chile)</li>
       </ul>
-    </section>
+    </div>
 
-    <section>
+    <div class="card">
       <h2>Educación</h2>
       <ul>
-        <li><strong>Universidad Europea</strong> — Máster en Análisis de Datos Masivos (Agosto 2023 - Noviembre 2024)</li>
-        <li><strong>Universidad de Chile</strong> — Ingeniería Comercial, Mención Economía (2016 - 2020)</li>
-        <li><strong>Georg-August-Universität Göttingen</strong> — Economía (2018 - 2019)</li>
-        <li><strong>Universidad de Santiago de Chile</strong> — (2015 - 2016)</li>
+        <li><strong>Universidad Europea</strong> — Máster en Análisis de Datos Masivos (2023 – 2024)</li>
+        <li><strong>Universidad de Chile</strong> — Ingeniería Comercial, Economía (2016 – 2020)</li>
+        <li><strong>Georg-August-Universität Göttingen</strong> — Economía (2018 – 2019)</li>
+        <li><strong>Universidad de Santiago de Chile</strong> — (2015 – 2016)</li>
       </ul>
-    </section>
+    </div>
 
-    <section>
+    <div class="card">
       <h2>Certificaciones</h2>
       <ul>
         <li>Deutschkurse A2.2</li>
         <li>Introducción a la Programación en R</li>
         <li>EF Standard English Test</li>
       </ul>
-    </section>
+    </div>
 
-    <section>
+    <div class="card">
       <h2>Idiomas</h2>
       <ul>
         <li>Inglés — Nivel Profesional Completo</li>
         <li>Alemán — Nivel Intermedio (Limited Working)</li>
       </ul>
-    </section>
+    </div>
 
-    <section>
+    <div class="card">
       <h2>Habilidades</h2>
       <p>Computer Science · Microsoft Power BI · Python · R · SQL · Data Analysis · Business Intelligence</p>
-    </section>
+    </div>
 
-    <section>
-      <h2>Publicaciones Destacadas</h2>
+    <div class="card">
+      <h2>Publicaciones</h2>
       <ul>
-        <li><em>Tecnologías digitales para un nuevo futuro</em></li>
-        <li><em>Gender-differentiated impact of PM2.5 exposure on respiratory and cardiovascular mortality: a review</em></li>
-        <li><em>La Inversión Extranjera Directa en América Latina y el Caribe 2020</em></li>
+        <li>Tecnologías digitales para un nuevo futuro</li>
+        <li>Gender-differentiated impact of PM2.5 exposure on respiratory and cardiovascular mortality: a review</li>
+        <li>La Inversión Extranjera Directa en América Latina y el Caribe 2020</li>
       </ul>
-    </section>
+    </div>
 
-    <section>
+    <div class="card">
       <h2>Reconocimientos</h2>
       <ul>
         <li>Círculo de Excelencia</li>
         <li>1º Lugar Olimpíadas Ingeniería Comercial</li>
         <li>Círculo de Excelencia (Reiterado)</li>
       </ul>
-    </section>
+    </div>
+
   </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Joaquín Vargas Salamanca — Built with ❤️ on GitHub Pages
+  </footer>
+
 </body>
 </html>
