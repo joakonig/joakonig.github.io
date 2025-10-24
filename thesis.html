@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thesis – Joaquín Vargas</title>
+  <style>
+    /* === Global Styles === */
+    :root {
+      --primary: #007acc;
+      --bg: #f9f9f9;
+      --text: #333;
+      --card-bg: #fff;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* === Header === */
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* === Thesis Content === */
+    .content {
+      max-width: 800px;
+      margin: 40px auto;
+      background: var(--card-bg);
+      border-radius: 8px;
+      box-shadow: 0 2px 6px var(--shadow);
+      padding: 30px;
+    }
+
+    h1, h2 {
+      color: var(--primary);
+    }
+
+    .pdf-link {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 18px;
+      background: var(--primary);
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .pdf-link:hover {
+      background: #005fa3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      background: #f1f1f1;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="https://www.linkedin.com/in/joaquinvargass/" target="_blank">LinkedIn</a>
+    </nav>
+  </header>
+
+  <!-- Thesis Content -->
+  <div class="content">
+    <h1>Thesis: Gender‑Differentiated Impact of PM2.5 Exposure</h1>
+
+    <p><strong>Author:</strong> Joaquín Vargas Salamanca</p>
+    <p><strong>Institution:</strong> Universidad de Chile</p>
+    <p><strong>Year:</strong> 2020</p>
+
+    <h2>Abstract</h2>
+    <p>
+      This thesis investigates the gender‑differentiated impact of PM2.5 air pollution
+      on respiratory and cardiovascular mortality rates across Latin America.
+      The analysis applies econometric and statistical models to estimate health outcomes
+      associated with exposure to PM2.5 concentrations, controlling for socioeconomic
+      and demographic factors.
+    </p>
+
+    <p>
+      The findings highlight the importance of considering gender differences in
+      public health policy design, particularly in contexts with substantial environmental inequality.
+    </p>
+
+    <a class="pdf-link" href="files/your-thesis.pdf" target="_blank">📄 View Full Thesis (PDF)</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Joaquín Vargas Salamanca — Built with ❤️ on GitHub Pages
+  </footer>
+
+</body>
+</html>
