@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thesis – Joaquín Vargas</title>
+  <title>Tesis de Máster – Joaquín Vargas</title>
   <style>
     /* === Global Styles === */
     :root {
       --primary: #007acc;
+      --primary-dark: #005fa3;
+      --secondary: #00c896;
       --bg: #f9f9f9;
       --text: #333;
+      --text-light: #666;
       --card-bg: #fff;
       --shadow: rgba(0, 0, 0, 0.1);
     }
@@ -43,31 +46,173 @@
 
     /* === Thesis Content === */
     .content {
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       background: var(--card-bg);
-      border-radius: 8px;
-      box-shadow: 0 2px 6px var(--shadow);
-      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px var(--shadow);
+      padding: 40px;
     }
 
-    h1, h2 {
+    h1 {
       color: var(--primary);
+      font-size: 2em;
+      margin-bottom: 10px;
+      border-bottom: 3px solid var(--primary);
+      padding-bottom: 10px;
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 1.4em;
+    }
+
+    .meta-info {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+      border-left: 4px solid var(--primary);
+    }
+
+    .meta-info p {
+      margin: 5px 0;
+    }
+
+    .highlight {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .abstract {
+      background: #f0f8ff;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid var(--secondary);
+      margin: 20px 0;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .result-card {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .result-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px var(--shadow);
+    }
+
+    .metric-value {
+      font-size: 2em;
+      font-weight: bold;
+      color: var(--secondary);
+    }
+
+    .metric-label {
+      color: var(--text-light);
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .tech-badge {
+      background: var(--primary);
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.9em;
+    }
+
+    .methodology-list {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .methodology-list ul {
+      margin: 10px 0;
+      padding-left: 25px;
+    }
+
+    .methodology-list li {
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .applications {
+      background: #e8f5e9;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+      border-left: 4px solid #4caf50;
+    }
+
+    .key-features {
+      display: grid;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .feature {
+      display: flex;
+      align-items: start;
+      gap: 15px;
+    }
+
+    .feature-icon {
+      color: var(--secondary);
+      font-size: 1.5em;
+      min-width: 30px;
+    }
+
+    .feature-text {
+      flex: 1;
+    }
+
+    .feature-title {
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 5px;
+    }
+
+    .feature-desc {
+      color: var(--text-light);
+      font-size: 0.95em;
     }
 
     .pdf-link {
       display: inline-block;
-      margin-top: 15px;
-      padding: 10px 18px;
+      margin-top: 25px;
+      padding: 12px 25px;
       background: var(--primary);
       color: white;
       border-radius: 5px;
       text-decoration: none;
       transition: background 0.2s ease;
+      font-weight: 600;
     }
 
     .pdf-link:hover {
-      background: #005fa3;
+      background: var(--primary-dark);
     }
 
     footer {
@@ -76,6 +221,24 @@
       font-size: 0.9em;
       background: #f1f1f1;
       color: #555;
+      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .content {
+        padding: 25px;
+        margin: 20px;
+      }
+      
+      nav a {
+        margin: 0 10px;
+        font-size: 0.95em;
+      }
+
+      .results-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
     }
   </style>
 </head>
@@ -92,27 +255,124 @@
 
   <!-- Thesis Content -->
   <div class="content">
-    <h1>Thesis: Gender‑Differentiated Impact of PM2.5 Exposure</h1>
+    <h1>Detección Automática de Logos en Transmisiones Deportivas con YOLOv8</h1>
 
-    <p><strong>Author:</strong> Joaquín Vargas Salamanca</p>
-    <p><strong>Institution:</strong> Universidad de Chile</p>
-    <p><strong>Year:</strong> 2020</p>
+    <div class="meta-info">
+      <p><strong>Autor:</strong> Joaquín Vargas Salamanca</p>
+      <p><strong>Institución:</strong> Universidad Europea de Madrid</p>
+      <p><strong>Programa:</strong> Máster en Big Data y Analytics</p>
+      <p><strong>Año:</strong> 2024</p>
+    </div>
 
-    <h2>Abstract</h2>
+    <div class="abstract">
+      <h2>Resumen</h2>
+      <p>
+        Esta tesis presenta el desarrollo e implementación de un sistema de <strong>computer vision</strong> basado en <strong>YOLOv8</strong> para la detección automática de logotipos en transmisiones deportivas en tiempo real. El proyecto aborda el desafío de identificar y rastrear logos publicitarios durante partidos de fútbol, proporcionando métricas precisas para el análisis del retorno de inversión (ROI) publicitario y la valorización de patrocinios deportivos.
+      </p>
+      <p>
+        El sistema alcanza una precisión del <strong>97%</strong> con un F1-score superior a <strong>0.95</strong>, demostrando su viabilidad para aplicaciones comerciales en la industria del marketing deportivo y análisis de medios.
+      </p>
+    </div>
+
+    <h2>Resultados Clave</h2>
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="metric-value">97%</div>
+        <div class="metric-label">Precisión</div>
+      </div>
+      <div class="result-card">
+        <div class="metric-value">>0.95</div>
+        <div class="metric-label">F1-Score</div>
+      </div>
+      <div class="result-card">
+        <div class="metric-value">30 FPS</div>
+        <div class="metric-label">Velocidad</div>
+      </div>
+      <div class="result-card">
+        <div class="metric-value">15+</div>
+        <div class="metric-label">Logos Detectados</div>
+      </div>
+    </div>
+
+    <h2>Stack Tecnológico</h2>
+    <div class="tech-stack">
+      <span class="tech-badge">Python</span>
+      <span class="tech-badge">YOLOv8</span>
+      <span class="tech-badge">PyTorch</span>
+      <span class="tech-badge">OpenCV</span>
+      <span class="tech-badge">Roboflow</span>
+      <span class="tech-badge">CUDA</span>
+      <span class="tech-badge">TensorBoard</span>
+      <span class="tech-badge">Docker</span>
+    </div>
+
+    <h2>Metodología</h2>
+    <div class="methodology-list">
+      <ul>
+        <li><strong>Recolección de Datos:</strong> Extracción y procesamiento de más de 10,000 frames de transmisiones deportivas de alta definición</li>
+        <li><strong>Etiquetado:</strong> Anotación manual y semi-automática de logos utilizando Roboflow, con control de calidad y validación cruzada</li>
+        <li><strong>Entrenamiento del Modelo:</strong> Fine-tuning de YOLOv8 con técnicas de data augmentation y hyperparameter optimization</li>
+        <li><strong>Optimización:</strong> Implementación de técnicas de aceleración GPU y optimización de inferencia para procesamiento en tiempo real</li>
+        <li><strong>Validación:</strong> Evaluación exhaustiva con métricas de precisión, recall, mAP y análisis de casos extremos</li>
+        <li><strong>Despliegue:</strong> Containerización con Docker y desarrollo de API REST para integración en sistemas de streaming</li>
+      </ul>
+    </div>
+
+    <h2>Características Principales</h2>
+    <div class="key-features">
+      <div class="feature">
+        <div class="feature-icon">🎯</div>
+        <div class="feature-text">
+          <div class="feature-title">Detección Multi-Logo</div>
+          <div class="feature-desc">Capacidad de identificar múltiples logos simultáneamente en diferentes ubicaciones del frame (vallas publicitarias, camisetas, pantallas LED)</div>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-text">
+          <div class="feature-title">Procesamiento en Tiempo Real</div>
+          <div class="feature-desc">Análisis de video en vivo a 30 FPS, permitiendo métricas instantáneas de exposición de marca</div>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📊</div>
+        <div class="feature-text">
+          <div class="feature-title">Analytics Avanzado</div>
+          <div class="feature-desc">Generación automática de reportes con tiempo de exposición, ubicación en pantalla y métricas de visibilidad</div>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔧</div>
+        <div class="feature-text">
+          <div class="feature-title">Pipeline Escalable</div>
+          <div class="feature-desc">Arquitectura modular que permite fácil actualización de modelos y adición de nuevos logos sin reentrenamiento completo</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="applications">
+      <h2>Aplicaciones Comerciales</h2>
+      <p>
+        Este sistema tiene aplicación directa en:
+      </p>
+      <ul>
+        <li><strong>Valorización de Patrocinios:</strong> Cuantificación precisa del valor de exposición de marca en eventos deportivos</li>
+        <li><strong>Análisis ROI Publicitario:</strong> Medición objetiva del retorno de inversión en publicidad deportiva</li>
+        <li><strong>Inteligencia de Mercado:</strong> Análisis comparativo de presencia de marca vs competidores</li>
+        <li><strong>Optimización de Ubicaciones:</strong> Identificación de las posiciones más efectivas para colocación de publicidad</li>
+        <li><strong>Reportes Automatizados:</strong> Generación de informes detallados para sponsors y anunciantes</li>
+      </ul>
+    </div>
+
+    <h2>Conclusiones</h2>
     <p>
-      This thesis investigates the gender‑differentiated impact of PM2.5 air pollution
-      on respiratory and cardiovascular mortality rates across Latin America.
-      The analysis applies econometric and statistical models to estimate health outcomes
-      associated with exposure to PM2.5 concentrations, controlling for socioeconomic
-      and demographic factors.
+      El proyecto demuestra la viabilidad de implementar sistemas de <span class="highlight">computer vision de última generación</span> para resolver problemas comerciales reales en la industria del deporte y el marketing. La combinación de YOLOv8 con técnicas avanzadas de procesamiento permite crear una herramienta robusta y escalable para la medición objetiva del valor publicitario.
+    </p>
+    <p>
+      Los resultados obtenidos superan los benchmarks actuales de la industria, ofreciendo una solución que puede transformar la manera en que se evalúan y monetizan los espacios publicitarios en eventos deportivos.
     </p>
 
-    <p>
-      The findings highlight the importance of considering gender differences in
-      public health policy design, particularly in contexts with substantial environmental inequality.
-    </p>
-
-    <a class="pdf-link" href="files/tesis.pdf" download>⬇️ Download Thesis (PDF)</a>
+    <a class="pdf-link" href="files/tesis.pdf" download>⬇️ Descargar Tesis Completa (PDF)</a>
   </div>
 
   <!-- Footer -->
